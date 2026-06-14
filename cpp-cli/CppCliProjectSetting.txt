@@ -1,0 +1,14 @@
+01. Add CLR/Windows Form to the Project and name it "MainForm.h"
+02. Replace MainForm.cpp with the current "example" file
+03. Open Project properties:
+    - Select Configuration = All Configurations, Platform = All Platforms
+    - Select Linker->System->SubSystem = Windows (/SUBSYSTEM:WINDOWS)
+	- Select Linker->Advanced->Entry Point = main
+	- Select C/C++->Precompiled Headers->Precompiled Header = Use (/Yu)
+	- Select C/C++->Precompiled Headers->Precompiled Header File = pch.h
+	- Select C/C++->Command Line->Additional Options = /utf-8
+04. Open pch.cpp properties:
+    - Select Configuration = All Configurations, Platform = All Platforms
+	- Select C/C++->Precompiled Headers->Precompiled Header = Create (/Yc)
+	- Select C/C++->Precompiled Headers->Precompiled Header File = pch.h
+05. Close the Solution and reopen it
